@@ -1,0 +1,10 @@
+:root {
+    --bg: #ccc;
+}
+
+body {
+  background: var(--bg);
+    margin: 0;
+    padding: 0;
+    height: 1000px;
+}
