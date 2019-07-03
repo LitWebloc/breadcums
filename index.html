@@ -1,25 +1,201 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Breadcrumbs</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.css" />
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="pagefirst blur">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="logo">
+                        <img src="logo.svg" alt="">
+                    </div>
+                    <nav id="menu">
+                        <a href="/price.html" class="">Other projects on themeforest
+                            <span class="wiggle"></span>
+                        </a>
+                        <a href="/portfolio.html" class="">Order site development
+                            <span class="wiggle"></span>
+                        </a>
+                        <a href="/about.html" class="">About Us
+                            <span class="wiggle"></span>
+                        </a>
+                        <div class="form-modal-phone">
+                            <a href="#ex2" data-modal class="button link-modal form-modal">
+                                support
+                            </a>
+                        </div>
+                    </nav>
+                    <div class="communication">
+                        <div class="nav_mob">
+                            <span class="n1"></span>
+                            <span class="n2"></span>
+                            <span class="n3"></span>
+                        </div>
+                        <div class="child">
+                            <a href="#ex2" data-modal class="button link-modal">
+                                support
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <a href="#next" class="container header">
+            <div class="row">
+                <h1 class="absolute">Breadcrumbs Elementor. 28 view style</h1>
+            </div>
+        </a>
+    </div>
+    <div id="next"></div>
 
-<header>
-    <div class="logo"><img src="ys.svg" alt=""></div>
-    <nav>
-        <a href="">Остальные проекты на themeforest</a>
-        <a href="">Заказать разработку сайта</a>
-        <a href="">О нас</a>
-        <a href="">Связаться</a>
-    </nav>
-    <a href="" class="btn">Связаться</a>
-</header>
-<section class="header">
-    <h1>Breadcums  Elementor. 28 view style</h1>
-</section>
 
+    <div id="ex2" class="modal">
+        <div class="top-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="forma">
+                        <p class="h4">stay here your message and we will answer it</p>
+                        <form action="">
+                            <input type="text" required placeholder="Name*">
+                            <input type="email" required placeholder="Email">
+                            <button class="button">send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <div class="container">
+            <div class="row flex">
+                <div class="w50">
+                <h2>What are bread crumbs?</h2>
+                <p>Bread crumbs, which are based on micro-markup from Google, are a special way to complement the snippet at the expense of the navigation chain, which demonstrates the place of the page in the site hierarchy. In fact, breadcrumbs replace the usual link in the search with the name of the sections and subsections in which the web page is located. The searcher gives the following example:</p>
+                </div>
+                <div class="w50 breadcrumbs-img">
+                    <img src="breaddemo.jpg" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <h3>Why do we need bread crumbs?</h3>
+<b>The use of breadcrumbs can be due to several reasons:</b>
+<ul>
+    <li>the fragment extended by the navigation chain more actively attracts the attention of the search engine user, thereby increasing the likelihood of him following a link;</li>
+    <li>the presence of bread crumbs in the search results reduces the time to search for the necessary information through more conscious navigation through the site;</li>
+    <li>Complemented by a fragment of the navigation chain, according to individual optimizers, the page becomes more relevant when Google is issued.</li>
+</ul>
+<p>These factors for many webmasters - a strong argument in favor of the introduction of the notorious bread crumbs in search results. And in order to bring them to your site, you can use our plugin.</p>
+            </div>
+            <div class="row">
+                <strong>Our plugin is presented on this page in 28 variations, since you can create bread crumbs that you like on your site.
+Below 28 different examples will be presented to the bread crumbs editor. Thanks to which you can create those crumbs that you want.</strong>
+            </div>
+        </div>
+    </div>
+    <div class="style1">
+        <div class="container">
+            <div class="row">
+                <div class="breadcrumbs style1" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <ol>
+                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="/">
+                                <span itemprop="name">Home</span></a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+                        
+                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="#!">
+                                <span itemprop="name">Parent page</span></a>
+                            <meta itemprop="position" content="2" />
+                        </li>
+                        
+                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <span itemscope itemtype="http://schema.org/Thing" itemprop="item">
+                                <span itemprop="name">Page</span></span>
+                            <meta itemprop="position" content="3" />
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script>
+        "use strict";
+
+        $('.modal').on($.modal.BEFORE_BLOCK, function(event) {
+            $('.blur').addClass('active');
+
+            $('header').addClass('active');
+        });
+        $('.modal').on($.modal.CLOSE, function(event) {
+            $('.blur').removeClass('active');
+
+            $('header').removeClass('active');
+        });
+        $('a[data-modal]').click(function(event) {
+            $(this).modal({
+                fadeDuration: 500,
+                fadeDelay: 0.50
+            });
+            return false;
+        });
+        $('.header').on('click', function() {
+            let el = $(this);
+            let dest = el.attr('href'); // получаем направление
+            if (dest !== undefined && dest !== '') { // проверяем существование
+                $('html').animate({
+                        scrollTop: $(dest).offset().top - 76 // прокручиваем страницу к требуемому элементу
+                    }, 500 // скорость прокрутки
+                );
+            }
+            return false;
+        });
+
+        $('.nav_mob').click(function() {
+            $('header nav').hasClass("active") ? $('header nav').removeClass('active') : $('header nav').addClass('active');
+            $('header').hasClass('navFixed2') ? $('header').removeClass('navFixed2') : $('header').addClass('navFixed2');
+            $(window).scroll(function() {
+                if ($('header').hasClass('navFixed2') && $('header nav').hasClass("active")) {
+                    $('header').removeClass('navFixed2');
+                    $('header nav').removeClass('active');
+                }
+            });
+        });
+        $('.modal').on($.modal.BEFORE_BLOCK, function(event) {
+            $('.blur').addClass('active');
+
+            $('header').addClass('active');
+        });
+        $('.modal').on($.modal.CLOSE, function(event) {
+            $('.blur').removeClass('active');
+
+            $('header').removeClass('active');
+        });
+        $('a[data-modal]').click(function(event) {
+            $(this).modal({
+                fadeDuration: 500,
+                fadeDelay: 0.50
+            });
+            return false;
+        });
+        $('.header').waypoint(function() {
+            $('header').hasClass('navFixed') ? $('header').removeClass('navFixed') : $('header').addClass('navFixed');
+        });
+
+    </script>
 </body>
+
 </html>

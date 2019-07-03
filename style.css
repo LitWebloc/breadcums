@@ -1,10 +1,649 @@
 :root {
-    --bg: #ccc;
+    --bg: #fff;
 }
 
+@font-face {
+
+    font-family: rig;
+
+    src: url('light.ttf');
+
+    font-weight: 300;
+
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: rig;
+
+    src: url('medium.ttf');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: rig;
+
+    src: url('bold.ttf');
+
+    font-weight: bold;
+
+    font-style: normal;
+
+}
+
+/*стандартные стили для страницы(пк) */
 body {
-  background: var(--bg);
+    background: var(--bg);
     margin: 0;
     padding: 0;
-    height: 1000px;
+    height: 10000px;
+    font-family: rig, sans-serif;
+    text-transform: uppercase;
+    font-weight: inherit;
+
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2.5vw;
+    text-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    color: #fff;
+}
+
+a.container {
+    display: block;
+    cursor: url(cursor.png) 36 44, auto;
+}
+
+.header {
+    position: relative;
+    height: 100%;
+}
+
+h1.absolute {
+    position: absolute;
+    text-align: center;
+    max-width: 1300px;
+    width: calc(100% - 80px);
+    top: calc(50% - 76px);
+}
+
+.pagefirst {
+    padding-top: 70px;
+    background: linear-gradient(126.85deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url(bread.jpg) no-repeat center/ cover fixed;
+    height: calc(100vh - 70px);
+    width: 100%;
+}
+
+@keyframes navdown {
+    0% {
+        opacity: 0;
+        top: -50px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes opacity_revers {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* line 4, ../scss/_design.scss */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: #b6b3bb;
+    /* or add it to the track */
+}
+
+/* Add a thumb */
+/* line 12, ../scss/_design.scss */
+::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+/* line 15, ../scss/_design.scss */
+::-webkit-scrollbar-thumb:hover {
+    background: #2a292d;
+}
+
+/* line 19, ../scss/_design       х
+ъ.scss */
+::-webkit-scrollbar-thumb:active {
+    background: #76717d;
+}
+
+/* line 24, ../scss/_design.scss */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* line 30, ../scss/_design.scss */
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.h2 {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 60px;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+}
+
+/* line 35, ../scss/_var.scss */
+.h3 {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* line 40, ../scss/_var.scss */
+.h4 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* line 35, ../scss/_design.scss */
+.logo {
+    width: 15%;
+}
+
+/* line 38, ../scss/_design.scss */
+.logo img {
+    width: 80%;
+    margin-top: 2%;
+}
+
+.container .row {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+header {
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    left: 0;
+    top: 0;
+    transition: 1s;
+    animation: opacity_revers .8s ease-in-out;
+}
+
+header.navFixed,
+header.navFixed2 {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+header .communication .child {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+header .communication .child img {
+    width: 13px;
+    height: 13px;
+    vertical-align: -1px;
+}
+
+header nav a {
+    margin-right: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+}
+
+header nav a:hover span {
+    width: 60%;
+}
+
+header nav a:last-child {
+    margin: 0;
+}
+
+header nav a:nth-child(1) {
+    animation: navdown .4s ease-in-out;
+}
+
+header nav a:nth-child(2) {
+    animation: navdown .5s ease-in-out;
+}
+
+header nav a:nth-child(3) {
+    animation: navdown .6s ease-in-out;
+}
+
+header nav a:nth-child(4) {
+    animation: navdown .7s ease-in-out;
+}
+
+header nav a:nth-child(5) {
+    animation: navdown .8s ease-in-out;
+}
+
+header .wiggle {
+    position: absolute;
+    bottom: -7px;
+    height: 4px;
+    left: 22%;
+    width: 0;
+    overflow: hidden;
+    transition: .6s ease-out;
+}
+
+header .wiggle:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(line.svg) repeat-x center center/7px 3px;
+}
+
+header .container .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 76px;
+}
+
+.blur,
+header.navFixed,
+header,
+header.navFixed2 {
+    transition: 1s;
+}
+
+.blur.active,
+header.navFixed.active,
+header.active,
+header.navFixed2.active {
+    filter: blur(3px);
+    transform: scale(1.006);
+}
+
+a.button,
+button {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    background: linear-gradient(90deg, #F39A4A 0%, #F69173 100%);
+    box-shadow: 0px 0px 10px rgba(246, 145, 115, 0.8);
+    transition: .6s ease-out;
+}
+
+a.button:hover,
+button:hover {
+    background: linear-gradient(90deg, #F69173 0%, #F39A4A 100%);
+    box-shadow: 0px 0px 15px #ffab91;
+    text-shadow: 0 0 15px #ffab91;
+}
+
+.container .row {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+.container .row.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .row.flex.center {
+    justify-content: center;
+}
+
+.container .row.flex.left {
+    justify-content: flex-start;
+}
+
+.container .row.flex.wrap {
+    flex-wrap: wrap;
+}
+
+.container .row.flex.align-center {
+    align-items: center;
+}
+
+.form-modal-phone {
+    display: none;
+}
+
+.container .row.flex.center {
+    justify-content: flex-start;
+}
+
+.container .row {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+.container .row.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .row.flex.center {
+    justify-content: center;
+}
+
+.container .row.flex.left {
+    justify-content: flex-start;
+}
+
+.container .row.flex.wrap {
+    flex-wrap: wrap;
+}
+
+.container .row.flex.align-center {
+    align-items: center;
+}
+
+.bg-black {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    display: block;
+    padding: 12px 57px;
+    border: none;
+    margin: 0 auto;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* line 698, ../scss/_design-price.scss */
+.line.white {
+    border-bottom: 3px solid #fff;
+    width: 100px;
+    margin-right: 20px;
+}
+
+/* line 704, ../scss/_design-price.scss */
+.line.black {
+    border-bottom: 3px solid #000;
+    width: 170px;
+    margin-bottom: 114px;
+}
+
+/* line 711, ../scss/_design-price.scss */
+.forma form {
+    text-align: center;
+}
+
+/* line 714, ../scss/_design-price.scss */
+.forma form input {
+    display: block;
+    padding: 11px 6px;
+    width: 97%;
+    border: 1px solid #C4C4C4;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* line 723, ../scss/_design-price.scss */
+.forma form button {
+    margin-top: 28px;
+}
+
+/* line 730, ../scss/_design-price.scss */
+.footer-text .text {
+    max-width: 550px;
+}
+
+/* line 735, ../scss/_design-price.scss */
+.top-footer {
+    background: #EEEEEE;
+    padding-top: 50px;
+}
+
+.modal {
+    max-width: 1300px;
+    z-index: 999999;
+}
+
+.modal .top-footer {
+    background: white;
+}
+
+.modal .container .row {
+    padding: 0;
+}
+
+.modal .line.black {
+    margin-bottom: 60px;
+}
+
+#ex2.modal {
+    max-width: 500px;
+}
+
+.blocker {
+    background: none;
+    z-index: 99999;
+}
+
+/*\стандартные стили для страницы(пк) */
+
+/*Описание плагина*/
+.breadcrumbs-img {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    padding: 60px 0;
+}
+.description .row{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.description p, .description ul, .description b{
+    text-transform: none;
+    font-family: 'Open Sans', sans-serif;
+}
+/*\Описание плагина*/
+/*Крошки*/
+
+
+
+/*\Крошки*/
+
+/*стандартные стили для страницы(моб) */
+@media (max-width: 1000px) {
+    .h2 {
+        font-size: 36px;
+        line-height: 39px;
+    }
+
+    footer .h4,
+    #ex2 .h4 {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    /* line 1072, ../scss/_design-price.scss */
+    #ex2 p {
+        font-size: 12px;
+    }
+
+    header .wiggle {
+        display: none;
+    }
+
+    header .container .row {
+        height: 90px;
+    }
+
+    header .communication {
+        bottom: -12px;
+    }
+
+    header .communication .child {
+        display: none;
+    }
+
+    header .communication .child:nth-child(3n) {
+        display: block;
+        margin-left: 0;
+        margin-top: 6px;
+        text-align: center;
+    }
+
+    header nav {
+        position: fixed;
+        top: 90px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        padding-top: 0px;
+        height: 0px;
+        transition: 1s;
+    }
+
+    header nav.active {
+        background: rgba(0, 0, 0, 0.9);
+        padding-top: 30px;
+        height: calc(100vh - 112px);
+        z-index: 99999;
+    }
+
+    header nav a {
+        display: block;
+        font-size: 24px;
+        text-align: right;
+        padding: 10px 40px;
+        margin-right: 0;
+    }
+
+    .nav_mob {
+        width: 22px;
+        height: 18px;
+    }
+
+    .nav_mob span {
+        height: 2px;
+        width: 100%;
+        display: block;
+        background: white;
+        border-radius: 3px;
+        transition: 1s;
+    }
+
+    .nav_mob span.n2 {
+        margin: 6px 0;
+    }
+
+    .navFixed2 .n1 {
+        transform: rotate(-45deg);
+        position: relative;
+        top: 8px;
+    }
+
+    .navFixed2 .nav_mob span.n2 {
+        margin: 0;
+        opacity: 0;
+    }
+
+    .navFixed2 .n3 {
+        transform: rotate(45deg);
+        position: relative;
+        top: 4px;
+    }
+
+    header .container .row {
+        flex-wrap: wrap;
+    }
+
+    header .container .row {
+        height: 90px;
+    }
+
+    header .communication {
+        bottom: -12px;
+    }
+
+    header .communication .child {
+        display: none;
+    }
+
+    header .communication .child:nth-child(3n) {
+        display: block;
+        margin-left: 0;
+        margin-top: 6px;
+        text-align: center;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    .form-modal-phone {
+        display: block;
+        position: absolute;
+        width: auto;
+        right: 0;
+        top: calc(100vh - 270px);
+        padding: 0 40px;
+    }
+    .flex{
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -o-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    
+    h1.absolute{
+        top: calc(45% - 76px);
+    }
+    h1{
+        font-size: 8.5vw;
+    }
+    .breadcrumbs-img {
+        width: 100%;
+    }
+    .breadcrumbs-img img{
+        width: 100%;
+        height: auto;
+    }
+    /*\стандартные стили для страницы(моб) */
+
 }
